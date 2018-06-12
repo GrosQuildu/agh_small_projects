@@ -15,7 +15,7 @@ Every car (PakCar.ads), booth at the border crossing (PakShed.ads) and cars spaw
 
 Car tasks are stored in a "free list", the rest are created at program beginning.
 
-![Gif it!](/przegra-record.gif)
+![Gif it!](/ada_border_crossing/przegra-record.gif)
 
 (I will fix that gif someday)
 
