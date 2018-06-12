@@ -1,0 +1,25 @@
+project PrzeGra is
+
+   for Main use ("przegra.adb");
+   for Source_Dirs use ("./src/**");
+   for Object_Dir use "obj";
+   for Exec_Dir use "bin";
+
+   package Builder is
+      for Default_Switches ("ada") use ("-g");
+   end Builder;
+
+   package Binder is
+      for Default_Switches ("ada") use ("-g", "-I/usr/lib/x86_64-linux-gnu/ada/adalib/ncursesada");
+   end Binder;
+
+   package Compiler is
+      for Default_Switches ("ada") use ("-g", "-I/usr/share/ada/adainclude/ncursesada");
+   end Compiler;
+
+   package Linker is
+      for Default_Switches ("ada") use ("-g", "-L/usr/lib/x86_64-linux-gnu/", "-lncursesada");
+   end Linker;
+
+end PrzeGra;
+
