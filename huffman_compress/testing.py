@@ -3,8 +3,8 @@
 import string, random, subprocess, time, hashlib, sys, datetime, os
 
 def test():
-    if subprocess.check_call(['./pp_compress','test.txt'])==0:
-        if subprocess.check_call(['./pp_compress','-d','test.txt.pp'])==0:
+    if subprocess.check_call(['./pp_compress','-f','test.txt'])==0:
+        if subprocess.check_call(['./pp_compress','-d','-f','test.txt.pp'])==0:
             with open('test.txt','r') as f:
                 h1=hashlib.md5(f.read()).digest()
             with open('test.txt.pp.dc','r') as f:
